@@ -9,9 +9,9 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace FriendshipOverMod.Scripts;
+namespace FriendshipOverMod.Cards;
 
-[Pool(typeof(ColorlessCardPool))]
+[Pool(typeof(DefectCardPool))]
 public class FOSelfExplode : CustomCardModel
 {
     private const int energyCost = 3;
@@ -20,12 +20,11 @@ public class FOSelfExplode : CustomCardModel
     private const TargetType targetType = TargetType.AllEnemies;
     private const bool shouldShowInCardLibrary = true;
 
-    private const decimal allyDamage = 15m;
-
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new HpLossVar(5m),
-        new DamageVar(40m, ValueProp.Move)
+        new HpLossVar("SelfHpLoss", 5m),
+        new DamageVar("EnemyDamage", 40m, ValueProp.Move),
+        new DamageVar("AllyDamage", 15m, ValueProp.Move)
     ];
 
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
@@ -41,14 +40,14 @@ public class FOSelfExplode : CustomCardModel
         await CreatureCmd.Damage(
             choiceContext,
             Owner.Creature,
-            DynamicVars.HpLoss.BaseValue,
+            DynamicVars["SelfHpLoss"].BaseValue,
             ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move,
             this
         );
 
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
+        await DamageCmd.Attack(DynamicVars["EnemyDamage"].BaseValue)
             .FromCard(this)
-            .TargetingAllOpponents(CombatState)
+            .TargetingAllOpponents(CombatState!)
             .Execute(choiceContext);
 
         await DealDamageToAllAllies(choiceContext);
@@ -56,15 +55,20 @@ public class FOSelfExplode : CustomCardModel
 
     protected override void OnUpgrade()
     {
-        DynamicVars.HpLoss.UpgradeValueBy(-1m);
-        DynamicVars.Damage.UpgradeValueBy(10m);
+        DynamicVars["SelfHpLoss"].UpgradeValueBy(-1m);
+        DynamicVars["EnemyDamage"].UpgradeValueBy(10m);
     }
 
     private async Task DealDamageToAllAllies(PlayerChoiceContext choiceContext)
     {
-        foreach (var player in CombatState.Players)
+        foreach (var player in CombatState!.Players)
         {
             if (player == Owner)
+            {
+                continue;
+            }
+
+            if (player.Creature == null)
             {
                 continue;
             }
@@ -72,7 +76,7 @@ public class FOSelfExplode : CustomCardModel
             await CreatureCmd.Damage(
                 choiceContext,
                 player.Creature,
-                allyDamage,
+                DynamicVars["AllyDamage"].BaseValue,
                 ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move,
                 this
             );

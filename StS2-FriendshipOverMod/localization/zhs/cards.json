@@ -1,4 +1,7 @@
 {
   "FRIENDSHIPOVERMOD-F_O_SELF_EXPLODE.title": "自爆",
-  "FRIENDSHIPOVERMOD-F_O_SELF_EXPLODE.description": "失去{HpLoss:diff()}点生命。\n对所有敌人造成{Damage:diff()}点伤害。\n对所有队友造成15点伤害。"
+  "FRIENDSHIPOVERMOD-F_O_SELF_EXPLODE.description": "失去{SelfHpLoss:diff()}点生命。\n对所有敌人造成{EnemyDamage:diff()}点伤害。\n对所有队友造成{AllyDamage:diff()}点伤害。",
+
+  "FRIENDSHIPOVERMOD-F_O_CHAOS_DRAIN.title": "混沌汲取",
+  "FRIENDSHIPOVERMOD-F_O_CHAOS_DRAIN.description": "随机一名队友失去{LoseStrength:diff()}点[gold]力量[/gold]和{LoseDexterity:diff()}点[gold]敏捷[/gold]。\n你获得{GainStrength:diff()}点[gold]力量[/gold]和{GainDexterity:diff()}点[gold]敏捷[/gold]。"
 }
