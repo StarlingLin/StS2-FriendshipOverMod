@@ -1,0 +1,4 @@
+{
+  "FRIENDSHIPOVERMOD-F_O_SELF_EXPLODE.title": "自爆",
+  "FRIENDSHIPOVERMOD-F_O_SELF_EXPLODE.description": "失去{HpLoss:diff()}点生命。\n对所有敌人造成{Damage:diff()}点伤害。\n对所有队友造成15点伤害。"
+}

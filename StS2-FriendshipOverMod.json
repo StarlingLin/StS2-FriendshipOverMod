@@ -1,0 +1,11 @@
+{
+  "id": "StS2-FriendshipOverMod",  
+  "name": "杀戮尖塔2友尽对决模组",
+  "author": "StarlingLin",
+  "description": "感谢来自BiliBili@一只冰茄子的卡面与卡牌效果。",
+  "version": "0.1",
+  "has_pck": true,         // 是否有 .pck 资源包
+  "has_dll": true,        // 是否有 .dll 代码
+  "dependencies": ["BaseLib"],     // 依赖的其他mod id
+  "affects_gameplay": true // 多人模式时是否影响内容，如果是替换模型和优化等不影响内容的mod可填false，默认true
+}
