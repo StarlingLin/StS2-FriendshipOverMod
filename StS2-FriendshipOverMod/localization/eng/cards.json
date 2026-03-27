@@ -1,0 +1,10 @@
+{
+  "FRIENDSHIPOVERMOD-F_O_SELF_EXPLODE.title": "Self-Destruct",
+  "FRIENDSHIPOVERMOD-F_O_SELF_EXPLODE.description": "Lose {SelfHpLoss:diff()} HP.\nDeal {EnemyDamage:diff()} damage to all enemies.\nDeal {AllyDamage:diff()} damage to all allies.",
+
+  "FRIENDSHIPOVERMOD-F_O_CHAOS_DRAIN.title": "Chaos Drain",
+  "FRIENDSHIPOVERMOD-F_O_CHAOS_DRAIN.description": "A random ally loses {LoseStrength:diff()} [gold]Strength[/gold] and {LoseDexterity:diff()} [gold]Dexterity[/gold].\nGain {GainStrength:diff()} [gold]Strength[/gold] and {GainDexterity:diff()} [gold]Dexterity[/gold].",
+
+  "FRIENDSHIPOVERMOD-F_O_CASTLING.title": "Castling",
+  "FRIENDSHIPOVERMOD-F_O_CASTLING.description": "Swap your [gold]Block[/gold] with the chosen ally's [gold]Block[/gold].{IfUpgraded:show:\nRefund half of that ally's [gold]Block[/gold].|}"
+}
