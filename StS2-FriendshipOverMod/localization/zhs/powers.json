@@ -5,5 +5,9 @@
 
   "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.title": "被掠夺",
   "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.description": "本场战斗中获得的[gold]金币[/gold]会被“[gold]收集者[/gold]”夺走。",
-  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.smartDescription": "本场战斗中获得的[gold]金币[/gold]会被“[gold]收集者[/gold]”夺走。"
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.smartDescription": "本场战斗中获得的[gold]金币[/gold]会被“[gold]收集者[/gold]”夺走。",
+
+  "FRIENDSHIPOVERMOD-F_O_RELAY_TARGET_POWER.title": "接力",
+  "FRIENDSHIPOVERMOD-F_O_RELAY_TARGET_POWER.description": "你打出的下一张[gold]能力牌[/gold]会被复制并加入施放者的[gold]抽牌堆[/gold]。",
+  "FRIENDSHIPOVERMOD-F_O_RELAY_TARGET_POWER.smartDescription": "你打出的下一张[gold]能力牌[/gold]会被复制并加入施放者的[gold]抽牌堆[/gold]。"
 }

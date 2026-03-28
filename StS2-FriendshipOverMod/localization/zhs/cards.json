@@ -12,5 +12,11 @@
   "FRIENDSHIPOVERMOD-F_O_COLLECTOR.description": "造成{Damage:diff()}点伤害。\n[gold]斩杀[/gold]时，掠夺本场战斗中其他队友获得的金币。",
 
   "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.title": "分散火力",
-  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n所有队友获得{Vulnerable:diff()}层[gold]易伤[/gold]。"
+  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n所有队友获得{Vulnerable:diff()}层[gold]易伤[/gold]。",
+
+  "FRIENDSHIPOVERMOD-F_O_ONE_STEP_AHEAD.title": "先走一步",
+  "FRIENDSHIPOVERMOD-F_O_ONE_STEP_AHEAD.description": "抽{Cards:diff()}张牌。\n向一名队友的[gold]抽牌堆[/gold]加入一张[gold]黏液[/gold]或[gold]晕眩[/gold]。",
+
+  "FRIENDSHIPOVERMOD-F_O_RELAY.title": "接力",
+  "FRIENDSHIPOVERMOD-F_O_RELAY.description": "将队友所打出的下一张[gold]能力牌[/gold]的复制品加入你的[gold]抽牌堆[/gold]。{IfUpgraded:show:\n[gold]固有[/gold]。|}"
 }

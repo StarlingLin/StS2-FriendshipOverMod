@@ -12,5 +12,11 @@
   "FRIENDSHIPOVERMOD-F_O_COLLECTOR.description": "Deal {Damage:diff()} damage.\n[gold]Fatal[/gold]: Seize [gold]Collector[/gold] and apply [gold]Plundered[/gold].|}",
 
   "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.title": "Spread Fire",
-  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.description": "Gain {Block:diff()} [gold]Block[/gold].\nAll allies gain {Vulnerable:diff()} [gold]Vulnerable[/gold]."
+  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.description": "Gain {Block:diff()} [gold]Block[/gold].\nAll allies gain {Vulnerable:diff()} [gold]Vulnerable[/gold].",
+
+  "FRIENDSHIPOVERMOD-F_O_ONE_STEP_AHEAD.title": "One Step Ahead",
+  "FRIENDSHIPOVERMOD-F_O_ONE_STEP_AHEAD.description": "Draw {Cards:diff()} cards.\nShuffle a [gold]Slimed[/gold] or [gold]Dazed[/gold] into a ally's [gold]draw pile[/gold].",
+
+  "FRIENDSHIPOVERMOD-F_O_RELAY.title": "Relay",
+  "FRIENDSHIPOVERMOD-F_O_RELAY.description": "Add a copy of the next [gold]Power[/gold] card played by an ally to your [gold]draw pile[/gold].{IfUpgraded:show:\n[gold]Innate[/gold].|}"
 }

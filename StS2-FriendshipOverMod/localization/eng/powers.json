@@ -5,5 +5,9 @@
 
   "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.title": "Plundered",
   "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.description": "Any [gold]Gold[/gold] gained this combat will be taken by the [gold]Collector[/gold].",
-  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.smartDescription": "Any [gold]Gold[/gold] gained this combat will be taken by the [gold]Collector[/gold]."
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.smartDescription": "Any [gold]Gold[/gold] gained this combat will be taken by the [gold]Collector[/gold].",
+
+  "FRIENDSHIPOVERMOD-F_O_RELAY_TARGET_POWER.title": "Relay",
+  "FRIENDSHIPOVERMOD-F_O_RELAY_TARGET_POWER.description": "The next [gold]Power[/gold] card you play is copied into the caster's [gold]draw pile[/gold].",
+  "FRIENDSHIPOVERMOD-F_O_RELAY_TARGET_POWER.smartDescription": "The next [gold]Power[/gold] card you play is copied into the caster's [gold]draw pile[/gold]."
 }
