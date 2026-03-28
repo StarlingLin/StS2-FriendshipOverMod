@@ -1,0 +1,9 @@
+{
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR_POWER.title": "Collector",
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR_POWER.description": "Plunder the [gold]Gold[/gold] gained by other plundered allies this combat.",
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR_POWER.smartDescription": "Plunder the [gold]Gold[/gold] gained by other plundered allies this combat.",
+
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.title": "Plundered",
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.description": "Any [gold]Gold[/gold] gained this combat will be taken by the [gold]Collector[/gold].",
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.smartDescription": "Any [gold]Gold[/gold] gained this combat will be taken by the [gold]Collector[/gold]."
+}

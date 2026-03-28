@@ -1,0 +1,9 @@
+{
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR_POWER.title": "收集者",
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR_POWER.description": "掠夺本场战斗中其他被掠夺队友获得的[gold]金币[/gold]。",
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR_POWER.smartDescription": "掠夺本场战斗中其他被掠夺队友获得的[gold]金币[/gold]。",
+
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.title": "被掠夺",
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.description": "本场战斗中获得的[gold]金币[/gold]会被“[gold]收集者[/gold]”夺走。",
+  "FRIENDSHIPOVERMOD-F_O_PLUNDERED_POWER.smartDescription": "本场战斗中获得的[gold]金币[/gold]会被“[gold]收集者[/gold]”夺走。"
+}

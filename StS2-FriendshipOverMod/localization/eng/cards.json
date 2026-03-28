@@ -6,5 +6,8 @@
   "FRIENDSHIPOVERMOD-F_O_CHAOS_DRAIN.description": "A random ally loses {LoseStrength:diff()} [gold]Strength[/gold] and {LoseDexterity:diff()} [gold]Dexterity[/gold].\nGain {GainStrength:diff()} [gold]Strength[/gold] and {GainDexterity:diff()} [gold]Dexterity[/gold].",
 
   "FRIENDSHIPOVERMOD-F_O_CASTLING.title": "Castling",
-  "FRIENDSHIPOVERMOD-F_O_CASTLING.description": "Swap your [gold]Block[/gold] with the chosen ally's [gold]Block[/gold].{IfUpgraded:show:\nRefund half of that ally's [gold]Block[/gold].|}"
+  "FRIENDSHIPOVERMOD-F_O_CASTLING.description": "Swap your [gold]Block[/gold] with the chosen ally's [gold]Block[/gold].{IfUpgraded:show:\nRefund half of that ally's [gold]Block[/gold].|}",
+
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR.title": "Collector",
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR.description": "Deal {Damage:diff()} damage.\n[gold]Fatal[/gold]: Seize [gold]Collector[/gold] and apply [gold]Plundered[/gold].|}"
 }
