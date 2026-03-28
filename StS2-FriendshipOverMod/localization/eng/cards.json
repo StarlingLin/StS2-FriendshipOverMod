@@ -9,5 +9,8 @@
   "FRIENDSHIPOVERMOD-F_O_CASTLING.description": "Swap your [gold]Block[/gold] with the chosen ally's [gold]Block[/gold].{IfUpgraded:show:\nRefund half of that ally's [gold]Block[/gold].|}",
 
   "FRIENDSHIPOVERMOD-F_O_COLLECTOR.title": "Collector",
-  "FRIENDSHIPOVERMOD-F_O_COLLECTOR.description": "Deal {Damage:diff()} damage.\n[gold]Fatal[/gold]: Seize [gold]Collector[/gold] and apply [gold]Plundered[/gold].|}"
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR.description": "Deal {Damage:diff()} damage.\n[gold]Fatal[/gold]: Seize [gold]Collector[/gold] and apply [gold]Plundered[/gold].|}",
+
+  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.title": "Spread Fire",
+  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.description": "Gain {Block:diff()} [gold]Block[/gold].\nAll allies gain {Vulnerable:diff()} [gold]Vulnerable[/gold]."
 }

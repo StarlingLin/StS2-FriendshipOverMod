@@ -9,5 +9,8 @@
   "FRIENDSHIPOVERMOD-F_O_CASTLING.description": "交换你和选定队友的[gold]格挡[/gold]。{IfUpgraded:show:\n返还队友一半的[gold]格挡[/gold]。|}",
 
   "FRIENDSHIPOVERMOD-F_O_COLLECTOR.title": "收集者",
-  "FRIENDSHIPOVERMOD-F_O_COLLECTOR.description": "造成{Damage:diff()}点伤害。\n[gold]斩杀[/gold]时，掠夺本场战斗中其他队友获得的金币。"
+  "FRIENDSHIPOVERMOD-F_O_COLLECTOR.description": "造成{Damage:diff()}点伤害。\n[gold]斩杀[/gold]时，掠夺本场战斗中其他队友获得的金币。",
+
+  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.title": "分散火力",
+  "FRIENDSHIPOVERMOD-F_O_SPREAD_FIRE.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n所有队友获得{Vulnerable:diff()}层[gold]易伤[/gold]。"
 }
