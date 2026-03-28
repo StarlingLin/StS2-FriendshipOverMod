@@ -20,7 +20,7 @@ using FriendshipOverMod.Utils;
 
 namespace FriendshipOverMod.Cards;
 
-[Pool(typeof(RegentCardPool))]
+[Pool(typeof(ColorlessCardPool))]
 public class FOCollector : CustomCardModel
 {
     private const int energyCost = 2;

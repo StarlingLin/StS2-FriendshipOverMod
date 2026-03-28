@@ -2,54 +2,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HarmonyLib;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Rewards;
-using MegaCrit.Sts2.Core.Rooms;
 using FriendshipOverMod.Utils;
 
 namespace FriendshipOverMod.Patches;
 
-[HarmonyPatch(typeof(RewardsCmd), nameof(RewardsCmd.OfferForRoomEnd))]
-public static class OfferForRoomEndPatch
+[HarmonyPatch(typeof(RewardsSet), nameof(RewardsSet.GenerateWithoutOffering))]
+public static class RewardsSetGeneratePatch
 {
-    public static bool Prefix(Player player, AbstractRoom room, ref Task __result)
+    private static bool _isGeneratingMirrorRewards;
+
+    public static void Postfix(RewardsSet __instance, ref Task<List<Reward>> __result)
     {
-        __result = RedirectOffer(player, room);
-        return false;
+        __result = HandleResult(__instance, __result);
     }
 
-    private static async Task RedirectOffer(Player player, AbstractRoom room)
+    private static async Task<List<Reward>> HandleResult(RewardsSet rewardsSet, Task<List<Reward>> originalTask)
     {
-        if (player?.RunState == null)
+        var rewards = await originalTask;
+
+        if (_isGeneratingMirrorRewards)
         {
-            await RewardsCmd.OfferCustom(player, new List<Reward>());
-            return;
+            return rewards;
         }
 
-        var runState = player.RunState;
+        var player = rewardsSet.Player;
+        var room = rewardsSet.Room;
+        var runState = player?.RunState;
+
+        if (player == null || room == null || runState == null)
+        {
+            return rewards;
+        }
 
         if (!FOCollectorTracker.TryGetCollector(runState, out ulong collectorNetId))
         {
-            var normalRewards = await new RewardsSet(player)
-                .WithRewardsFromRoom(room)
-                .GenerateWithoutOffering();
-
-            await RewardsCmd.OfferCustom(player, normalRewards);
-            return;
+            return rewards;
         }
 
-        var rewards = await new RewardsSet(player)
-            .WithRewardsFromRoom(room)
-            .GenerateWithoutOffering();
+        bool isCollector = player.NetId == collectorNetId;
+        bool isPlundered = FOCollectorTracker.IsPlundered(runState, player.NetId);
 
-        if (FOCollectorTracker.IsPlundered(runState, player.NetId))
+        if (isPlundered)
         {
             rewards.RemoveAll(r => r is GoldReward);
         }
 
-        if (player.NetId == collectorNetId)
+        if (!isCollector)
         {
+            return rewards;
+        }
+
+        try
+        {
+            _isGeneratingMirrorRewards = true;
+
             foreach (var otherPlayer in runState.Players)
             {
                 if (otherPlayer.NetId == collectorNetId)
@@ -72,7 +80,11 @@ public static class OfferForRoomEndPatch
                 }
             }
         }
+        finally
+        {
+            _isGeneratingMirrorRewards = false;
+        }
 
-        await RewardsCmd.OfferCustom(player, rewards);
+        return rewards;
     }
 }
