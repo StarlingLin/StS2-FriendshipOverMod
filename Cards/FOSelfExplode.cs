@@ -22,9 +22,9 @@ public class FOSelfExplode : CustomCardModel
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new HpLossVar("SelfHpLoss", 5m),
-        new DamageVar("EnemyDamage", 40m, ValueProp.Move),
-        new DamageVar("AllyDamage", 15m, ValueProp.Move)
+        new HpLossVar("SelfHpLoss", 3m),
+        new DamageVar("EnemyDamage", 55m, ValueProp.Move),
+        new DamageVar("AllyDamage", 12m, ValueProp.Move)
     ];
 
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
@@ -56,7 +56,8 @@ public class FOSelfExplode : CustomCardModel
     protected override void OnUpgrade()
     {
         DynamicVars["SelfHpLoss"].UpgradeValueBy(-1m);
-        DynamicVars["EnemyDamage"].UpgradeValueBy(10m);
+        DynamicVars["EnemyDamage"].UpgradeValueBy(15m);
+        DynamicVars["AllyDamage"].UpgradeValueBy(-4m);
     }
 
     private async Task DealDamageToAllAllies(PlayerChoiceContext choiceContext)
@@ -77,7 +78,7 @@ public class FOSelfExplode : CustomCardModel
                 choiceContext,
                 player.Creature,
                 DynamicVars["AllyDamage"].BaseValue,
-                ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move,
+                ValueProp.Unpowered | ValueProp.Move,
                 this
             );
         }

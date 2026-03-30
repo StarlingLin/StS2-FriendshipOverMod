@@ -15,7 +15,7 @@ namespace FriendshipOverMod.Cards;
 [Pool(typeof(RegentCardPool))]
 public class FOCastling : CustomCardModel
 {
-    private const int energyCost = 2;
+    private const int energyCost = 1;
     private const CardType type = CardType.Skill;
     private const CardRarity rarity = CardRarity.Uncommon;
     private const TargetType targetType = TargetType.AnyAlly;
@@ -79,5 +79,6 @@ public class FOCastling : CustomCardModel
 
     protected override void OnUpgrade()
     {
+        AddKeyword(CardKeyword.Retain);
     }
 }

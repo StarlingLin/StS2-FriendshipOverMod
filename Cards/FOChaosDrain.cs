@@ -87,6 +87,8 @@ public class FOChaosDrain : CustomCardModel
     {
         DynamicVars["LoseStrength"].UpgradeValueBy(-1m);
         DynamicVars["LoseDexterity"].UpgradeValueBy(-1m);
+        DynamicVars["GainStrength"].UpgradeValueBy(1m);
+        DynamicVars["GainDexterity"].UpgradeValueBy(1m);
     }
 
     private dynamic? GetRandomTeammate()

@@ -24,6 +24,11 @@ public class FORelay : CustomCardModel
 
     public override string PortraitPath => $"res://StS2-FriendshipOverMod/images/cards/{Id.Entry.ToLowerInvariant()}.png";
 
+    public override IEnumerable<CardKeyword> CanonicalKeywords =>
+    [
+        CardKeyword.Retain
+    ];
+    
     public FORelay() : base(energyCost, type, rarity, targetType, shouldShowInCardLibrary)
     {
     }

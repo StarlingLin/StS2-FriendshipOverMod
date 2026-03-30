@@ -3,7 +3,7 @@
   "name": "杀戮尖塔2友尽对决模组",
   "author": "StarlingLin",
   "description": "感谢来自BiliBili@一只冰茄子的卡面与卡牌效果。",
-  "version": "0.2",
+  "version": "0.2.1",
   "has_pck": true,         // 是否有 .pck 资源包
   "has_dll": true,        // 是否有 .dll 代码
   "dependencies": ["BaseLib"],     // 依赖的其他mod id

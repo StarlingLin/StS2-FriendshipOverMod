@@ -31,7 +31,7 @@ public class FOCollector : CustomCardModel
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar("Damage", 15m, ValueProp.Move)
+        new DamageVar("Damage", 18m, ValueProp.Move)
     ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords =>
@@ -78,7 +78,7 @@ public class FOCollector : CustomCardModel
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Damage"].UpgradeValueBy(5m);
+        DynamicVars["Damage"].UpgradeValueBy(7m);
         AddKeyword(CardKeyword.Retain);
     }
 
